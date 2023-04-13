@@ -77,7 +77,7 @@ jobs:
           passphrase: ${{ secrets.PASSPHRASE }}
           script: |
             # Выполняет pull образа с DockerHub
-            sudo docker pull angelina91/infra_actions
+            sudo docker pull angelina91/infra_project
             #остановка всех контейнеров
             sudo docker stop $(sudo docker ps -a -q)
-            sudo docker run --rm -d -p 5000:5000 angelina91/infra_actions
+            sudo docker run --rm -d -p 5000:5000 angelina91/infra_project
